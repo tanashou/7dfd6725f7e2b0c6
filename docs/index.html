@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="budget-appは、本人の端末で使う個人用の家計簿アプリです。Gmail連携の目的とデータの取り扱いを説明します。">
+  <title>budget-app — 個人用の家計簿</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="ページ案内"><a href="./" aria-current="page">アプリについて</a><a href="privacy.html">プライバシーポリシー</a></nav>
+  </header>
+  <main>
+    <h1>budget-app</h1>
+    <p class="lead">本人の端末で使う、個人用の家計簿アプリです。</p>
+    <p>MacやRaspberry Piで家計の記録を管理するために開発しています。一般向けの利用者募集は行っていません。このサイトは、アプリの説明とデータの取り扱いを公開するためのものです。</p>
+
+    <h2>Gmail連携の目的</h2>
+    <p>本人が許可したGmailアカウントからカードの利用通知を読み取り、家計の支出を確認するために使います。</p>
+    <p>現在は読み取りの試運転（dry-run）です。送信元・件名で候補を選び、メールの認証結果を確認して、対応する通知から利用情報を読み取ります。画面に表示するのは件数と確認が必要な理由です。Gmailから読み取ったデータの家計簿への登録や、Slackへの送信は行いません。</p>
+    <p>今後、利用通知による速報と、CSVの確定明細を照合する機能を追加する予定です。データの取り扱いを変更する際は、実装・利用に先立って説明とポリシーを更新します。</p>
+
+    <h2>必要な権限とデータの扱い</h2>
+    <p>Google OAuthで、Gmailの読み取り専用権限（<code>gmail.readonly</code>）を求めます。この権限ではメールボックス全体を読み取れますが、アプリでは通知の取得・選別・認証・読み取りに使用します。メールの送信・変更・削除は行いません。</p>
+    <p>Gmailから取得したメールやその内容を、AIサービスに送ったり、AIで解析したりすることはありません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+
+    <h2>お問い合わせ</h2>
+    <p>運営・開発：<a href="https://github.com/tanashou">tanashou</a></p>
+    <p>アプリやデータの取り扱いに関するお問い合わせは、<a href="https://github.com/tanashou/budget-app-public-site/issues">説明サイトのGitHub Issues</a>で受け付けます。投稿は公開されるため、メールの内容、認証情報、家計の情報は記載しないでください。</p>
+  </main>
+  <footer><p>budget-app · <a href="privacy.html">プライバシーポリシー</a></p></footer>
+</body>
+</html>

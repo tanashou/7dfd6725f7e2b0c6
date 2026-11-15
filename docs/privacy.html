@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="budget-appのGmail連携におけるデータへのアクセス、利用、保存、共有、削除方針。">
+  <title>プライバシーポリシー — budget-app</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="ページ案内"><a href="./">アプリについて</a><a href="privacy.html" aria-current="page">プライバシーポリシー</a></nav>
+  </header>
+  <main>
+    <h1>プライバシーポリシー</h1>
+    <p>対象アプリ：budget-app<br>制定・最終更新日：2026年11月15日</p>
+    <p>budget-appは、開発者本人が自分の端末で使用する個人用の家計簿アプリです。このポリシーは、現在のGmail連携と、この説明サイトにおけるデータの取り扱いを定めます。</p>
+
+    <h2>1. アクセスするデータ</h2>
+    <p>本人の同意を得て、Google OAuthのGmail読み取り専用権限（<code>https://www.googleapis.com/auth/gmail.readonly</code>）を使用します。この権限はメールボックス全体の読み取りを許可するものです。メールの送信・変更・削除は行いません。</p>
+    <p>アプリは、接続先を確認するためのメールアドレス、検索に一致したメールのID、送信元・件名のヘッダを取得します。候補や要確認と判断したメールについて、認証結果を含むヘッダと本文を取得します。対応する利用通知から、利用日時・金額・利用先などの情報を読み取ります。</p>
+
+    <h2>2. 利用目的と現在の機能</h2>
+    <p>取得したデータは、本人の家計管理に必要な利用通知の選別、送信元の認証確認、利用情報の読み取りに使用します。現在はdry-runのみで、件数と確認が必要な理由を表示します。メール由来の取引を家計簿へ登録したり、Slackへ送信したりする機能は、現在の処理に含まれません。</p>
+    <p>メールやメール由来のデータをAIサービスに送信せず、AIによる解析・モデルの学習にも使用しません。広告、販売、信用評価には使用しません。</p>
+
+    <h2>3. 保存と保護</h2>
+    <p>取得したメールと読み取った利用情報は、実行中の端末のメモリ上で処理します。現在のdry-runは、メールの本文や利用情報をファイル・データベースへ保存せず、処理済みのメールIDも永続化しません。通常の出力には、メール本文・件名・送信元・認証トークンを含めません。</p>
+    <p>継続アクセスに必要なOAuthトークンなどの資格情報は、本人の管理する端末に暗号化して保存し、ファイルへのアクセスを制限します。実行中に必要な情報を復号して使用します。資格情報をこのサイトや公開リポジトリへ置くことはありません。</p>
+    <p>元のメールはGmail側に残ります。アプリがGmail上のメールを自動削除することはありません。</p>
+
+    <h2>4. データの共有</h2>
+    <p>現在のGmail連携では、Google APIとの通信以外に、取得したメールやメール由来のデータを外部サービスへ送信しません。第三者への販売・広告目的の提供は行いません。この説明サイトやGitHubにも、取得したメール・利用情報・資格情報を送信しません。</p>
+    <p>budget-appによるGoogle APIから取得した情報の利用および他のアプリへの転送は、制限付き使用の要件（Limited Use）を含む<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>に従います。</p>
+
+    <h2>5. アクセスの停止と削除</h2>
+    <p>本人は、<a href="https://myaccount.google.com/connections">Googleアカウントの接続管理</a>からbudget-appへのアクセス許可を取り消せます。取り消し後は新たなGmailデータを取得できなくなります。</p>
+    <p>利用を終了する際はアプリの実行を停止し、端末に保存したOAuth資格情報と、その控え・バックアップを本人が削除してください。現在のdry-runでは、処理したメールと利用情報の永続保存は行わないため、別途削除するアプリ内のメールデータはありません。Gmail上の元メールを消す場合は、本人がGmailで削除します。</p>
+
+    <h2>6. この説明サイト</h2>
+    <p>このサイトはGitHub Pagesで配信する静的ページです。アプリのGmail認可や家計データの入力・送信は、このサイトでは行いません。独自のCookie、アクセス解析、広告、外部フォントは使用しません。</p>
+    <p>サイト配信に伴うアクセス情報の取り扱いは、配信元の<a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHubのプライバシーステートメント</a>もご確認ください。</p>
+
+    <h2>7. 変更とお問い合わせ</h2>
+    <p>利用通知の家計簿への登録やCSVとの照合は、今後の予定です。データの利用・保存・共有方法を変更する場合は、変更前にこのポリシーを更新し、必要に応じて本人の同意を得ます。</p>
+    <p>運営・開発は<a href="https://github.com/tanashou">tanashou</a>が行っています。お問い合わせは<a href="https://github.com/tanashou/budget-app-public-site/issues">説明サイトのGitHub Issues</a>へお願いします。投稿は公開されるため、メールの内容、認証情報、家計の情報は記載しないでください。</p>
+  </main>
+  <footer><p><a href="./">budget-appの説明に戻る</a></p></footer>
+</body>
+</html>
